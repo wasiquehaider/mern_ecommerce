@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Header, Footer } from "./components";
-import { HomeScreen, ProductScreen } from "./screens";
+import { HomeScreen, ProductScreen, CartScreen } from "./screens";
 import { Container } from "react-bootstrap";
 const App = () => {
   return (
@@ -10,6 +10,7 @@ const App = () => {
         <Container>
           <Route path="/" component={HomeScreen} exact />
           <Route path="/product/:id" component={ProductScreen} />
+          <Route path="/cart/:id?" component={CartScreen} />
         </Container>
       </main>
       <Footer />
